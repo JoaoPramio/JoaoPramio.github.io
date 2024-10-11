@@ -1,0 +1,326 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html {
+    scroll-behavior: smooth;
+}
+
+header {
+    background-color: #EE6D45;
+    width: 100%;
+    height: 110px;
+    position: fixed;
+    padding: 10px;
+    align-items: center;
+    display: flex;
+    z-index: 1000;
+}
+
+.logo {
+    border-radius: 25px;
+    height: 85px;
+    width: 12%;
+}
+
+nav {
+    display: flex;
+    gap: 15px;
+    position: fixed;
+    font-family: "Italiana", serif;
+    color: #ffffff;
+    justify-content: center;
+    margin-left: 250px;
+    font-size: 28px;
+    min-width: 70px;
+    font-weight: 600;
+}
+
+nav a {
+    text-decoration: none;
+    color: #ffffff;
+    padding: 0 15px;
+    border-right: 1px solid #ffffff;
+}
+
+nav a:last-child {
+    border-right: none;
+}
+
+.hero {
+    background-image: url(image\ 4\ \(1\).png);
+    max-width: 100%;
+    height: 800px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.hero img {
+    width: 300px;
+    height: 150px;
+    border-radius: 25px;
+}
+
+.hero p {
+    padding: 20px;
+    position: relative;
+    font-family: "Kaushan Script";
+    color: #ffffff;
+    text-align: center;
+    font-size: 60px;
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+.carrossel {
+    background-color: #33322D;
+    height: 700px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.carrossel p {
+    color: #ffffff;
+    font-family: "Kaushan Script";
+    text-align: center;
+    font-size: 90px;
+    margin-bottom: 70px;
+}
+
+.carrossell {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.222);
+    padding: 30px 5px;
+    align-items: center;
+}
+
+.foto-container {
+    position: relative;
+    width: 350px;
+    height: 350px;
+}
+
+.foto {
+    width: 90%;
+    height: 90%;
+    object-fit: cover;
+}
+
+.texto-foto {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #ffffff;
+    font-family: "Kaushan Script", cursive;
+    font-size: 24px;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+.arrow {
+    width: 30px;
+    height: 30px;
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+.arrow:hover {
+    width: 32px;
+    height: 32px;
+}
+
+.foto:hover {
+    width: 92%;
+    height: 92%;
+}
+
+nav a:hover {
+    font-size: 28.5px;
+    color: #ebcd98;
+}
+
+.carrossell div {
+    width: 300px;
+    height: 300px;
+    background-color: #ffffff;
+    display: flex;
+    align-items: center; 
+    justify-content: center;
+}
+.head{
+        background-color:#EE6D45;
+        height: 120px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+}
+.thead {
+    color: #ffffff;
+    font-family: "Kaushan Script";
+    text-align: center;
+    font-size: 80px;
+}
+.hero img:hover{
+    width: 301px;
+    height: 151px;
+    border-radius: 25px;
+}
+.logo:hover {
+    border-radius: 25px;
+    height: 83px;
+    width: 179px;
+}
+
+.thead p {
+    font-size: 60px;
+}
+
+.fundo {
+    background-color: #DFDEDE;
+    height: 500px; 
+    width: 100%;
+    padding: 50px;
+}
+
+.comidas {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px; 
+    justify-items: center; 
+}
+
+.comidas img {
+    width: 175px;
+    height: 150px;
+    border-radius: 25px;
+}
+
+.comidas .nome {
+    text-align: center;
+    font-size: 20px;
+    font-weight: 700;
+    font-family: "italiana";
+}
+.comidas img:hover{
+    width: 174px;
+    height: 149px;
+}
+.comida-reta{
+    height: auto;
+    width: auto;
+    font-weight: 500;
+    max-width: 100%;
+}
+.fundo2 {
+    background-color: #DFDEDE;
+    height: 400px; 
+    width: 100%;
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    flex-direction: column;
+}
+
+.escreva input {
+    padding: 10px; 
+    font-size: 22px;
+    border: 2px solid #ccc;
+    border-radius: 5px; 
+    width: 80%; 
+    width: 350px;
+    max-width: 400px;
+    font-family: "italiana";
+    text-decoration: none;
+    text-align: center;
+    font-weight: 800;
+}
+button{
+    position: absolute;
+    background-color: #EE6D45;
+    font-family: "Kaushan Script";
+    color: #ffffff;
+    border-radius: 30px;
+    width: 100px;
+    height: 50px;
+    border: none;
+    margin-top: 9%;
+    margin-right: 1%;
+    font-size: 22px;
+}
+.footer {
+    background-color: #000000;
+    height: 120px;
+    display: flex;
+    align-items: center; 
+    justify-content: space-evenly; 
+    flex-wrap: wrap;
+    text-align: center;
+    padding: 20px; 
+}
+
+.footer .ftext {
+    color: #ffffff;
+    font-family: "Kaushan Script";
+    font-size: 20px;
+    margin: 0;
+
+}
+
+.footer img {
+    width: 290px;
+    height: 70px;
+    margin-top: 10px; 
+}
+.receita{
+    background-color: white;
+    width:500px;
+    height:200px;
+    justify-items: center;
+    align-items: center;
+    padding: 10px;
+}
+.h1{
+    text-align: center;
+}
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: 1000;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background-color: white;
+    margin: 15% auto;
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 600px;
+    text-align: center;
+}
+
+.close {
+    position: absolute;
+    right: 470px;
+    top: 226px;
+    font-size: 30px;
+    cursor: pointer;
+    color:rgb(0, 0, 0)
+}

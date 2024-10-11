@@ -1,0 +1,305 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Easy Recipes</title>
+    <link rel="stylesheet" href="style.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Italiana&display=swap" rel="stylesheet">
+
+    <script src="scrol.js"></script>
+    <script>
+        function openModal(title, text) {
+            document.getElementById("modalTitle").innerText = title;
+            document.getElementById("modalText").innerText = text;
+            document.getElementById("recipeModal").style.display = "block";
+        }
+
+        function closeModal() {
+            document.getElementById("recipeModal").style.display = "none";
+        }
+    </script>
+
+</head>
+
+<body>
+    <header>
+        <img src="Fast Recipes (2).png" class="logo" alt="Logo Fast Recipes">
+        <nav>
+            <a href="#fitness">Receitas Fitness</a>
+            <a href="#salgadas">Receitas Salgadas</a>
+            <a href="#doces">Receitas Doces</a>
+            <a href="#aperitivos">Aperitivos</a>
+            <a href="#bebidas">Bebidas</a>
+            <a href="#feedback">Feedback</a>
+        </nav>
+    </header>
+    
+
+    <div class="hero">
+        <img src="Fast Recipes (2).png">
+        <p>Cozinhar nunca foi tão fácil!</p>
+    </div>
+    
+
+
+    <div class="carrossel">
+        <p>Receitas do dia!</p>
+        <div class="carrossell">
+            <img src="arrow.png" class="arrow" onclick="prevImage()">
+            <div class="foto-container">
+                <div onclick="openModal('Sobremesa em taça', '\nPara preparar esta deliciosa sobremesa, você vai precisar de 1 lata de leite condensado, 1 lata de creme de leite, 2 xícaras de leite, 2 colheres de sopa de amido de milho, 1 xícara de chocolate em barra derretido (ou achocolatado) e bolachas (tipo Maria ou Oreo).\nComece misturando o leite condensado, o creme de leite, o leite e o amido de milho em uma panela.\nLeve ao fogo médio, mexendo até engrossar, e divida a mistura em duas partes.\nEm uma delas, adicione o chocolate derretido.\nEm uma taça, alterne camadas de creme, bolacha triturada e creme de chocolate.\nFinalize com chocolate derretido ou bolacha triturada por cima.\n')">
+                    <img src="image 1.png" class="foto">
+                    <span class="texto-foto">Sobremesa em taça</span>
+                </div>
+            </div>
+            <div class="foto-container">
+                <div onclick="openModal('Espetinho', '\nPara fazer o espetinho, você vai precisar de 500g de carne (alcatra ou frango em cubos), 1 pimentão (verde, vermelho ou amarelo) em cubos, 1 cebola em pedaços grandes, 1 abobrinha em rodelas grossas, sal, pimenta e ervas a gosto, além de palitos de madeira para espetinho.\nTempere a carne com sal, pimenta e ervas.\nNos palitos de espetinho, intercale carne, pimentão, cebola e abobrinha.\nGrelhe ou asse no forno até que a carne esteja cozida e os legumes levemente dourados.\n')">
+                    <img src="image.png" class="foto">
+                    <span class="texto-foto">Espetinho</span>
+                </div>
+            </div>
+            <div class="foto-container">
+                <div onclick="openModal('Tortilha mexicana', '\nPara a tortilha, você vai precisar de 2 xícaras de farinha de trigo, 1/2 colher de chá de sal, 3/4 de xícara de água morna e 3 colheres de sopa de óleo.\nMisture todos os ingredientes até formar uma massa homogênea.\nDivida em pequenas bolinhas e abra com um rolo de massa.\nAqueça uma frigideira e cozinhe cada tortilha até dourar dos dois lados.\nPara o recheio, use frango desfiado, alface, tomate picado, guacamole e creme azedo.\n')">
+                    <img src="image 2.png" class="foto">
+                    <span class="texto-foto">Tortilha mexicana</span>
+                </div>
+            </div>
+            <div class="foto-container">
+                <div onclick="openModal('Pina Colada', '\nPara preparar uma refrescante piña colada, você vai precisar de 100ml de leite de coco, 100ml de suco de abacaxi, 50ml de rum branco (opcional), 1 colher de sopa de açúcar e gelo a gosto.\nColoque todos os ingredientes no liquidificador e bata até ficar homogêneo.\nSirva em um copo alto com uma rodela de abacaxi na borda.\n')">
+                    <img src="pinacolada.jpg" class="foto">
+                    <span class="texto-foto">Pina Colada</span>
+                </div>
+            </div>
+            <div class="foto-container">
+                <div onclick="openModal('Panqueca de Whey', '\nPara fazer panquecas de whey, misture 1 scoop de whey protein sabor baunilha ou chocolate, 1 ovo, 1 colher de sopa de aveia, 1/2 banana amassada (opcional para doçura) e 1 colher de chá de fermento até formar uma massa homogênea.\nDespeje em uma frigideira antiaderente e cozinhe até que bolhas se formem na superfície.\nVire e doure o outro lado.\nSirva com mel, frutas ou iogurte grego.\n')">
+                    <img src="proteica.png" class="foto">
+                    <span class="texto-foto">Panqueca de whey</span>
+                </div>
+            </div>
+            <img src="arrow (2).png" class="arrow" onclick="nextImage()">
+        </div>
+    </div>
+
+
+
+    <div class="head">
+        <div id="fitness" class="thead">
+            <p>Receitas Fitness</p>
+        </div>
+    </div>
+
+    <div class="fundo">
+        <div class="comidas">
+            <div onclick="openModal('Panqueca de Aveia', '\nPara fazer panquecas de aveia, você vai precisar de 1 xícara de aveia em flocos, 1 banana madura, 2 ovos, 1/2 xícara de leite (ou leite vegetal), 1 colher de chá de fermento em pó e uma pitada de sal.\nMisture todos os ingredientes no liquidificador até obter uma massa homogênea.\nAqueça uma frigideira antiaderente e despeje porções da massa, cozinhando até que bolhas se formem na superfície.\nVire e doure o outro lado.\nSirva com mel, frutas ou iogurte.\n')">
+                <img src="panqueca.png" alt="Panqueca">
+                <p class="nome">Panqueca de Aveia</p>
+            </div>
+            <div onclick="openModal('Tilápia Grelhada', '\nPara preparar a tilápia grelhada, você vai precisar de filés de tilápia, suco de 1 limão, 2 colheres de sopa de azeite de oliva, sal, pimenta e temperos a gosto (como alho em pó e ervas finas).\nTempere os filés com o suco de limão, azeite, sal e pimenta.\nAqueça uma grelha ou frigideira e cozinhe os filés por 3-4 minutos de cada lado, ou até que estejam cozidos e levemente dourados.\nSirva com legumes grelhados ou arroz.\n')">
+                <img src="tilapia.jpg" alt="Tilápia">
+                <p class="nome">Tilápia Grelhada</p>
+            </div>
+            <div onclick="openModal('Muffin de Banana', '\nPara fazer muffins de banana, você vai precisar de 2 bananas maduras amassadas, 1/4 de xícara de óleo, 1/2 xícara de açúcar, 1 ovo, 1 xícara de farinha de trigo, 1/2 colher de chá de bicarbonato de sódio e 1/2 colher de chá de fermento em pó.\nMisture as bananas amassadas, o óleo, o açúcar e o ovo até ficar homogêneo.\nAdicione a farinha, o bicarbonato e o fermento, misturando até incorporar.\nDespeje em forminhas de muffin e asse em forno pré-aquecido a 180°C por 20-25 minutos.\n')">
+                <img src="muffin.jpg" alt="Muffin">
+                <p class="nome">Muffin de Banana</p>
+            </div>
+            <div onclick="openModal('Salmão com Camarão e Aspargos', '\nPara essa receita, você vai precisar de 2 filés de salmão, 200g de camarões limpos, 200g de aspargos, 2 colheres de sopa de azeite, sal, pimenta e suco de 1 limão.\nTempere o salmão e os camarões com azeite, sal, pimenta e limão.\nEm uma frigideira, aqueça um pouco de azeite e refogue os aspargos por 2-3 minutos.\nAdicione o salmão e os camarões, cozinhando por mais 5-7 minutos até que o salmão esteja cozido e os camarões estejam rosados.\n')">
+                <img src="salmao.jpg" alt="Salmão">
+                <p class="nome">Salmão com<br>Camarão e Aspargos</p>
+            </div>
+            <div onclick="openModal('Iogurte com Granola e Frutas', '\nPara preparar esta opção saudável, você vai precisar de 1 pote de iogurte natural, 1/2 xícara de granola e frutas da sua escolha (como morangos, bananas ou mirtilos).\nEm um copo ou tigela, coloque uma camada de iogurte, seguida de uma camada de granola e uma camada de frutas.\nRepita as camadas até encher o recipiente.\nSirva imediatamente como café da manhã ou lanche.\n')">
+                <img src="yougurt.png" alt="Iogurte">
+                <p class="nome">Iogurte com<br>Granola e Frutas</p>
+            </div>
+            <div onclick="openModal('Tapioca com Frango', '\nPara fazer tapioca com frango, você vai precisar de 1/2 xícara de goma de tapioca, 100g de peito de frango cozido e desfiado, sal, pimenta e temperos a gosto.\nAqueça uma frigideira antiaderente e despeje a goma de tapioca, espalhando para formar uma camada fina.\nCozinhe por 1-2 minutos até que a tapioca comece a soltar das bordas.\nAdicione o frango desfiado temperado ao centro da tapioca, dobre ao meio e cozinhe por mais 1-2 minutos.\nSirva quente.\n')">
+                <img src="Tapioca.jpg" alt="Tapioca">
+                <p class="nome">Tapioca com<br>Frango</p>
+            </div>
+        </div>
+    </div>
+    
+    <div><img src="fitness.jpg" class="comida-reta"></div>
+
+    <div id="recipeModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <h1 class="h1" id="modalTitle">Título da Receita</h1>
+            <p id="modalText">Descrição e instruções da receita aparecerão aqui.</p>
+        </div>
+
+    </div>
+    <div id="salgadas" class="head">
+        <div class="thead">
+            <p>Receitas Salgadas</p>
+        </div>
+    </div>
+    <div class="fundo">
+        <div class="comidas">
+            <div onclick="openModal('Lasanha à Bolonhesa', '\nPara fazer lasanha à bolonhesa, você vai precisar de 500g de carne moída, 2 cebolas picadas, 2 dentes de alho picados, 1 lata de molho de tomate, 12 folhas de massa para lasanha, 300g de queijo muçarela, 200g de queijo parmesão, sal, pimenta e orégano a gosto.\nRefogue a cebola e o alho em uma panela com azeite, adicione a carne moída e cozinhe até dourar.\nJunte o molho de tomate e tempere a gosto.\nEm um refratário, monte a lasanha intercalando camadas de massa, molho, queijo muçarela e parmesão.\nFinalize com queijo por cima e leve ao forno a 180°C por 30 minutos.\n')">
+                <img src="lasanha.jpg" alt="Lasanha">
+                <p class="nome">Lasanha à Bolonhesa</p>
+            </div>
+            <div onclick="openModal('Macarrão à Carbonara', '\nPara preparar o macarrão à carbonara, você vai precisar de 400g de macarrão (espaguete ou fettuccine), 150g de pancetta ou bacon, 3 ovos, 100g de queijo parmesão ralado, sal e pimenta-do-reino a gosto.\nCozinhe o macarrão em água salgada até ficar al dente.\nEnquanto isso, frite a pancetta em uma frigideira até ficar crocante.\nEm uma tigela, bata os ovos com o queijo parmesão, sal e pimenta.\nEscorra o macarrão e misture rapidamente com a pancetta e a mistura de ovos, para que o calor do macarrão cozinhe os ovos.\nSirva imediatamente.\n')">
+                <img src="carbonara.jpg" alt="Carbonara">
+                <p class="nome">Macarrão à<br>Carbonara</p>
+            </div>
+            <div onclick="openModal('Panqueca com Carne Moída', '\nPara fazer panqueca com carne moída, você vai precisar de 1 xícara de farinha de trigo, 2 ovos, 1 xícara de leite, 1/2 colher de chá de sal, 300g de carne moída, 1 cebola picada, sal e pimenta a gosto.\nMisture a farinha, os ovos, o leite e o sal até obter uma massa homogênea.\nEm uma frigideira, refogue a cebola, adicione a carne moída e cozinhe até dourar.\nEm outra frigideira, faça panquecas com a massa, recheando com a carne moída e dobrando ao meio.\nSirva com molho de tomate por cima.\n')">
+                <img src="panquecasal.jpg" alt="Panqueca Salgada">
+                <p class="nome">Panqueca com<br>Carne Moída</p>
+            </div>
+            <div onclick="openModal('Bobó de Camarão', '\nPara preparar o bobó de camarão, você vai precisar de 500g de camarões limpos, 1 cebola picada, 2 dentes de alho picados, 1 batata-doce cozida e amassada, 400ml de leite de coco, 2 colheres de sopa de azeite de dendê, sal e coentro a gosto.\nRefogue a cebola e o alho em uma panela, adicione os camarões e cozinhe por alguns minutos.\nMisture a batata-doce amassada e o leite de coco, cozinhe até ferver.\nFinalize com o azeite de dendê e o coentro.\nSirva com arroz branco.\n')">
+                <img src="bobo.jpg" alt="Bobó">
+                <p class="nome">Bobó de Camarão</p>
+            </div>
+            <div onclick="openModal('Empadão de Frango', '\nPara fazer empadão de frango, você vai precisar de 500g de peito de frango cozido e desfiado, 1 cebola picada, 2 tomates picados, 1/2 xícara de azeitonas, 1 ovo, 3 xícaras de farinha de trigo, 1/2 xícara de manteiga, sal e pimenta a gosto.\nRefogue a cebola e o tomate, adicione o frango desfiado e as azeitonas, tempere a gosto.\nMisture a farinha, a manteiga e o sal até formar uma massa.\nForre uma forma com a massa, adicione o recheio e cubra com mais massa.\nAsse a 180°C por 30-40 minutos até dourar.\n')">
+                <img src="empada.png" alt="Empada">
+                <p class="nome">Empadão de Frango</p>
+            </div>
+            <div onclick="openModal('Feijoada', '\nPara preparar a feijoada, você vai precisar de 500g de feijão preto, 300g de carne seca, 200g de linguiça calabresa, 200g de costela de porco, 1 cebola picada, 4 dentes de alho picados, sal e pimenta a gosto.\nDeixe o feijão de molho por algumas horas e depois cozinhe em água.\nEm outra panela, refogue a cebola e o alho, adicione as carnes picadas e cozinhe até dourar.\nMisture o feijão cozido e as carnes, temperando a gosto.\nCozinhe por mais 30-40 minutos em fogo baixo.\nSirva com arroz, couve e laranja.\n')">
+                <img src="feijoada.jpg" alt="Feijoada">
+                <p class="nome">Feijoada</p>
+            </div>
+        </div>
+    </div>
+    
+    <div><img src="salgado.jpg" class="comida-reta"></div>
+    
+    <div id="doces" class="head">
+        <div class="thead">
+            <p>Receitas Doces</p>
+        </div>
+    </div>
+    <div class="fundo">
+        <div class="comidas">
+            <div onclick="openModal('Banoffee', ' \nPara fazer banoffee, você vai precisar de 1 pacote de biscoito tipo maisena, 100g de manteiga derretida, 1 lata de leite condensado, 3 bananas fatiadas, 200g de creme de leite e chocolate granulado a gosto. \nTriture os biscoitos e misture com a manteiga até formar uma farofa. \nPressione essa mistura no fundo de uma forma e leve à geladeira. \nCozinhe o leite condensado na panela de pressão por cerca de 30 minutos para formar o doce de leite. \nEspalhe o doce de leite sobre a base de biscoitos, coloque as bananas fatiadas por cima, cubra com o creme de leite e finalize com o chocolate granulado. \nLeve à geladeira por algumas horas antes de servir.\n')">
+                <img src="banoffe.jpg" alt="Banoffee">
+                <p class="nome">Banoffee</p>
+            </div>
+            <div onclick="openModal('Tiramisù', '\nPara fazer tiramisù, você vai precisar de 3 ovos, 100g de açúcar, 250g de queijo mascarpone, 200ml de café forte, 1 pacote de biscoitos tipo ladyfinger, cacau em pó para polvilhar e chocolate meio amargo para decorar. \nBata as claras em neve e reserve. \nEm outra tigela, bata as gemas com o açúcar até obter um creme claro. \nAdicione o mascarpone e misture suavemente. \nIncorpore as claras em neve à mistura de mascarpone. \nMergulhe os biscoitos no café e faça camadas alternadas com o creme. \nFinalize com cacau em pó e decore com chocolate. \nLeve à geladeira por pelo menos 4 horas antes de servir.\n')">
+                <img src="tiramisu.png" alt="Tiramisu">
+                <p class="nome">Tiramisù</p>
+            </div>
+            <div onclick="openModal('Pudim de Leite', '\nPara fazer pudim de leite, você vai precisar de 1 lata de leite condensado, 2 medidas de leite, 3 ovos e 1 xícara de açúcar para a calda. \nPara a calda, derreta o açúcar em uma panela até obter um caramelo dourado e espalhe no fundo da forma. \nNo liquidificador, bata o leite condensado, o leite e os ovos até ficar homogêneo. \nDespeje a mistura na forma caramelizada e leve ao forno em banho-maria por cerca de 1 hora a 180°C. \nDeixe esfriar, desenforme e sirva.\n')">
+                <img src="pudim.jpg" alt="Pudim">
+                <p class="nome">Pudim de Leite</p>
+            </div>
+            <div onclick="openModal('Torta de Frutas Vermelhas', '\nPara fazer torta de frutas vermelhas, você vai precisar de 1 pacote de biscoito tipo maisena, 100g de manteiga, 300g de cream cheese, 1 lata de leite condensado, 200g de frutas vermelhas (morango, framboesa, mirtilo) e gelatina em pó. \nTriture os biscoitos e misture com a manteiga. \nPressione a mistura no fundo de uma forma e leve à geladeira. \nBata o cream cheese com o leite condensado até ficar cremoso. \nEspalhe sobre a base de biscoitos. \nPrepare a gelatina conforme as instruções e adicione as frutas. \nDespeje sobre a torta e leve à geladeira até firmar.\n')">
+                <img src="torta.png" alt="Torta">
+                <p class="nome">Torta de Frutas<br>Vermelhas</p>
+            </div>
+            <div onclick="openModal('Mousse de Maracujá', '\nPara fazer mousse de maracujá, você vai precisar de 1 lata de leite condensado, 1 lata de creme de leite e 1/2 xícara de suco de maracujá. \nBata todos os ingredientes no liquidificador até obter uma mistura homogênea. \nDespeje em taças e leve à geladeira por pelo menos 3 horas antes de servir. \nDecore com polpa de maracujá ou raspas de chocolate, se desejar.\n')">
+                <img src="mousse.jpg" alt="Mousse">
+                <p class="nome">Mousse de Maracujá</p>
+            </div>
+            <div onclick="openModal('Brownie', '\nPara fazer brownie, você vai precisar de 200g de chocolate meio amargo, 100g de manteiga, 1 xícara de açúcar, 3 ovos, 1 xícara de farinha de trigo e 100g de nozes picadas. \nDerreta o chocolate e a manteiga em banho-maria. \nMisture o açúcar, adicione os ovos um a um, e depois a farinha. \nIncorpore as nozes. \nDespeje em uma forma untada e leve ao forno a 180°C por cerca de 20-25 minutos. \nDeixe esfriar, corte em quadrados e sirva.')">
+                <img src="brownie.png" alt="Brownie">
+                <p class="nome">Brownie</p>
+            </div>
+        </div>
+    </div>
+    <div><img src="doce.jpg" class="comida-reta"></div>
+    
+    <div id="aperitivos" class="head">
+        <div class="thead">
+            <p>Aperitivos</p>
+        </div>
+    </div>
+    <div class="fundo">
+        <div class="comidas">
+            <div onclick="openModal('Anéis de Lula', '\nPara fazer anéis de lula, você vai precisar de 500g de anéis de lula, 1 xícara de farinha de trigo, 1 xícara de farinha de milho, 1 ovo, 1 xícara de leite, sal e pimenta a gosto. \nMisture a farinha de trigo e a farinha de milho em um prato. \nEm outro prato, bata o ovo com o leite, sal e pimenta. \nPasse os anéis de lula pela mistura de ovo e depois pela farinha. \nFrite em óleo quente até dourar e sirva com limão e molho de sua preferência.\n')">
+                <img src="lula.jpg" alt="Anéis de Lula">
+                <p class="nome">Anéis de Lula</p>
+            </div>
+            <div onclick="openModal('Camarão empanado', '\nPara fazer camarão empanado, você vai precisar de 500g de camarões limpos, 1 xícara de farinha de trigo, 1 ovo, 1 xícara de farinha de rosca, sal, pimenta e suco de limão a gosto. \nTempere os camarões com sal, pimenta e suco de limão. \nPasse-os na farinha de trigo, depois no ovo batido e, por último, na farinha de rosca. \nFrite em óleo quente até ficarem dourados e crocantes. \nSirva com molho tártaro ou molho de sua preferência.\n')">
+                <img src="camarao.jpg" alt="Camarão empanado">
+                <p class="nome">Camarão empanado</p>
+            </div>
+            <div onclick="openModal('Guacamole e Nachos', '\nPara fazer guacamole, você vai precisar de 2 abacates maduros, 1 tomate picado, 1/2 cebola picada, suco de 1 limão, sal e pimenta a gosto. \nAmasse os abacates em uma tigela e misture com o tomate, a cebola e o suco de limão. \nTempere com sal e pimenta. \nSirva com nachos crocantes. \nPara fazer os nachos, você pode usar tortilhas de milho cortadas em triângulos e assá-las no forno até ficarem crocantes.\n')">
+                <img src="guacamole.png" alt="Guacamole e Nachos">
+                <p class="nome">Guacamole e Nachos</p>
+            </div>
+            <div onclick="openModal('Bolinho de Bacalhau', '\nPara fazer bolinho de bacalhau, você vai precisar de 500g de bacalhau desfiado, 3 batatas cozidas e amassadas, 1 cebola picada, 2 dentes de alho picados, 2 ovos, salsinha picada, sal e pimenta a gosto. \nMisture o bacalhau com as batatas, a cebola, o alho e a salsinha. \nAdicione os ovos e tempere com sal e pimenta. \nModele os bolinhos e frite em óleo quente até ficarem dourados. \nSirva com molho de pimenta ou maionese.\n')">
+                <img src="bacalhau.png" alt="Bolinho de Bacalhau">
+                <p class="nome">Bolinho de Bacalhau</p>
+            </div>
+            <div onclick="openModal('Bolinha de Queijo', '\nPara fazer bolinha de queijo, você vai precisar de 500g de queijo muçarela ralado, 2 ovos, 1/2 xícara de farinha de trigo, 1 xícara de farinha de rosca, sal e pimenta a gosto. \nMisture o queijo, os ovos e a farinha de trigo até formar uma massa. \nModele as bolinhas e passe na farinha de rosca. \nFrite em óleo quente até dourar e sirva quente.\n')">
+                <img src="bolinhas.jpg" alt="Bolinha de Queijo">
+                <p class="nome">Bolinha de Queijo</p>
+            </div>
+            <div onclick="openModal('Coxinha de Frango', '\nPara fazer coxinha de frango, você vai precisar de 500g de peito de frango cozido e desfiado, 2 xícaras de farinha de trigo, 1 xícara de caldo de galinha, 1 cebola picada, 2 dentes de alho picados, 1/2 xícara de salsinha picada, sal e pimenta a gosto. \nRefogue a cebola e o alho, adicione o frango desfiado e tempere. \nMisture a farinha com o caldo até formar uma massa. \nModele as coxinhas, empane em farinha de rosca e frite até dourar. \nSirva quente.')">
+                <img src="coxinha.jpg" alt="coxinha">
+                <p class="nome">Coxinha de Frango</p>
+            </div>
+        </div>
+    </div>
+    <div><img src="petisco.jpg" class="comida-reta"></div>
+    
+    <div id="bebidas" class="head">
+        <div class="thead">
+            <p>Bebidas</p>
+        </div>
+    </div>
+    <div class="fundo">
+        <div class="comidas">
+            <div onclick="openModal('Limonada', '\nPara fazer uma caipirinha, você vai precisar de 1 limão cortado em pedaços, 2 colheres de sopa de açúcar, 50ml de cachaça e gelo a gosto. \nColoque os pedaços de limão e o açúcar em um copo e macere levemente para soltar o suco. \nAdicione a cachaça e complete com gelo. \nMexa bem e sirva gelada.\n')">
+                <img src="lemonada.jpg" alt="Limonada">
+                <p class="nome">Limonada</p>
+            </div>
+            <div onclick="openModal('Smoothie de Frutas', '\nPara fazer um smoothie de frutas, você vai precisar de 1 banana, 1/2 xícara de morangos, 1/2 xícara de iogurte natural, 1 colher de sopa de mel e 1/2 xícara de leite. \nBata todos os ingredientes no liquidificador até obter uma mistura homogênea. \nSirva gelado em um copo e, se desejar, decore com pedaços de frutas por cima.\n')">
+                <img src="smoothie.png" alt="Smoothie">
+                <p class="nome">Smoothie de Frutas</p>
+            </div>
+            <div onclick="openModal('Caipirinha Brasileira', '\nPara fazer uma caipirinha brasileira, você vai precisar de 1 limão cortado em rodelas, 2 colheres de sopa de açúcar, 50ml de cachaça e gelo a gosto. \nColoque as rodelas de limão e o açúcar em um copo e macere para liberar o suco. \nAdicione a cachaça e complete com gelo. \nMexa bem e aproveite essa refrescante bebida.\n')">
+                <img src="caipirinha.jpg" alt="Caipirinha">
+                <p class="nome">Caipirinha Brasileira</p>
+            </div>
+            <div onclick="openModal('Chocolate Quente', '\n Para fazer chocolate quente, você vai precisar de 2 xícaras de leite, 100g de chocolate meio amargo picado, 2 colheres de sopa de açúcar e 1 colher de sopa de amido de milho. \nEm uma panela, aqueça o leite e adicione o chocolate picado, mexendo até derreter. \nMisture o açúcar e o amido de milho diluído em um pouco de leite frio. \nCozinhe até engrossar e sirva quente, polvilhado com canela se desejar.\n')">
+                <img src="chocolateq.png" alt="Chocolate">
+                <p class="nome">Chocolate Quente</p>
+            </div>
+            <div onclick="openModal('Cappuccino', '\nPara fazer um cappuccino, você vai precisar de 1 xícara de café expresso, 1/2 xícara de leite vaporizado e 1 colher de sopa de açúcar. \nPrepare o café expresso e reserve. \nAqueça o leite e faça espuma. \nMisture o café com o açúcar e complete com o leite vaporizado. \nPolvilhe com canela ou chocolate em pó por cima e sirva quente.\n')">
+                <img src="capuccino.png" alt="Cappuccino">
+                <p class="nome">Cappuccino</p>
+            </div>
+            <div onclick="openModal('Frappè de Café', '\nPara fazer frappè de café, você vai precisar de 1 xícara de café frio, 1/2 xícara de leite, 2 colheres de sopa de açúcar e gelo a gosto. \nColoque todos os ingredientes no liquidificador e bata até ficar homogêneo e espumoso. \nSirva em um copo alto e decore com chantilly se desejar.\n')">
+                <img src="frappe.jpg" alt="Frappe">
+                <p class="nome">Frappè de café</p>
+            </div>
+        </div>
+    </div>
+    
+    <div><img src="bebida.jpg" class="comida-reta"></div>
+
+    <div id="feedback" class="head">
+        <div class="thead">
+            <p>Deixe seu Feedback!</p>
+        </div>
+    </div>
+    <div class="fundo2">
+        <div class="escreva">
+            <input type="text" id="inputText" placeholder="Digite aqui...">
+        </div>
+        <button id="clearButton">Enviar</button>
+    </div>
+
+    <div class="footer">
+        <div class="ftext">
+            <p>Creditle for images: Unsplash ,<br>Pixabay and Flaticon</p>
+        </div>
+        <div class="ftext">
+            <p>Feito por: João Vitor Pramio</p>
+        </div>
+
+        <img src="image 3.png">
+    </div>
+    <script src="carrossel.js"></script>
+
+    <script>
+     document.getElementById('clearButton').addEventListener('click', function() {
+        document.getElementById('inputText').value = '';
+    });
+    </script>
+    
+</body>
+</html>
